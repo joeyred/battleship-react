@@ -1,0 +1,69 @@
+$base-padding: 0.625rem;
+
+.base {
+  display: flex;
+  width: auto;
+
+}
+
+.vertical {
+  flex-flow: column nowrap;
+  width: auto;
+
+}
+
+.horizontal {
+  flex-flow: row nowrap;
+
+}
+
+.button-container {
+  position: relative;
+}
+
+.button {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: -2px;
+
+  svg {
+    min-width: 3rem;
+    min-height: 3rem;
+  }
+}
+.button-vertical {
+}
+
+.background {
+
+}
+
+
+
+
+// .vertical-button {
+//   padding: $base-padding;
+//   background: #98ABBC;
+//
+//
+//   &:first-child {
+//     border-radius: 50% 50% 0 0;
+//   }
+//
+//   &:last-child {
+//     border-radius: 0 50% 50% 0;
+//   }
+// }
+//
+// .horizontal-button {
+//   padding: $base-padding;
+//   background: #98ABBC;
+//
+//   &:first-child {
+//     border-radius: 50% 0 0 50%;
+//   }
+//
+//   &:last-child {
+//     border-radius: 0 50% 50% 0;
+//   }
+// }
