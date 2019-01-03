@@ -34,7 +34,7 @@ const Button = (props) => {
 
   const lightFill = on ? 'url(#light)' : '#FFFFFF';
   return (
-    <Graphic width={graphicRadius * 2} height={graphicRadius * 2}>
+    <Graphic viewBox={graphicRadius * 2}>
       <defs>
         {/* Outer Gradiant */}
         <radialGradient id='outer' cx={graphicRadius} cy={graphicRadius} r={circleRadius} gradientUnits='userSpaceOnUse'>

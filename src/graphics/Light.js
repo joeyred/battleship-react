@@ -13,7 +13,7 @@ const Light = (props) => {
   } = props;
   return (
     <figure className={styles.container}>
-      <Graphic width={60} height={60}>
+      <Graphic viewBox={[60, 60]}>
         <defs>
           <radialGradient id='light_cover' cx='30' cy='30' r='26.168' gradientUnits='userSpaceOnUse'>
               <stop offset='0' stopColor='#ccc' stopOpacity='0.3' />
@@ -28,7 +28,7 @@ const Light = (props) => {
       </Graphic>
 
 
-      <Graphic width={60} height={60} display={on} className={styles.glow}>
+      <Graphic viewBox={[60, 60]} display={on} className={styles.glow}>
         <defs>
           <filter id='effect_blur'>
             <feGaussianBlur stdDeviation='2' />

@@ -15,24 +15,26 @@ import SquareContainer from '../components/SquareContainer';
 storiesOf('Welcome', module)
   .add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 storiesOf('Light', module)
-  .add('on', () => <Light colorOn='#6BF27B' colorOff='#7EC493' on={true} />)
-  .add('off', () => <Light colorOn='#6BF27B' colorOff='#7EC493' on={false} />)
+  .add('on', () => <div style={{width: '60px', height: '60px'}}><Light colorOn='#6BF27B' colorOff='#7EC493' on={true} /></div>)
+  .add('off', () => <div style={{width: '60px', height: '60px'}}><Light colorOn='#6BF27B' colorOff='#7EC493' on={false} /></div>)
   ;
 storiesOf('Button', module)
-  .add('on', () => <Button on={true}/>)
-  .add('off', () => <Button on={false}/>)
+  .add('on', () => <div style={{width: '60px', height: '60px'}}><Button on={true}/></div>)
+  .add('off', () => <div style={{width: '60px', height: '60px'}}><Button on={false}/></div>)
   ;
 storiesOf('ButtonGroup', module)
   .add('horizontal', () =>
+    <div style={{height: '60px', width: '100%'}}>
     <ButtonGroup
       numberOfButtons={5}
       orientation='horizontal'
-    />)
+    /></div>)
     .add('vertical', () =>
+      <div style={{height: '100%', width: '60px'}}>
       <ButtonGroup
         numberOfButtons={5}
         orientation='vertical'
-      />);
+      /></div>);
 
 storiesOf('Button Grid', module)
   .add('square grid', () => (
