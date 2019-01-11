@@ -12,6 +12,8 @@ import ButtonGroup from '../components/ButtonGroup';
 import ButtonGrid from '../components/ButtonGrid';
 import SquareContainer from '../components/SquareContainer';
 
+import * as Graphic from '../graphics';
+
 storiesOf('Welcome', module)
   .add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 storiesOf('Light', module)
@@ -49,7 +51,82 @@ storiesOf('Button Grid', module)
         showCoordinates={true}
       />
     </SquareContainer>
+  ));
+
+storiesOf('Seven Segment Display', module)
+  .addDecorator(story =>
+    <div
+      style={{
+        width: '20%',
+        height: 'auto',
+        margin: '4rem auto'
+      }}
+    >
+    {story()}
+    </div>
+  )
+  .add('0', () => (
+    <Graphic.SevenSegmentDisplay character={0} />
   ))
+  .add('1', () => (
+    <Graphic.SevenSegmentDisplay character={1} />
+  ))
+  .add('2', () => (
+    <Graphic.SevenSegmentDisplay character={2} />
+  ))
+  .add('3', () => (
+    <Graphic.SevenSegmentDisplay character={3} />
+  ))
+  .add('4', () => (
+    <Graphic.SevenSegmentDisplay character={4} />
+  ))
+  .add('5', () => (
+    <Graphic.SevenSegmentDisplay character={5} />
+  ))
+  .add('6', () => (
+    <Graphic.SevenSegmentDisplay character={6} />
+  ))
+  .add('7', () => (
+    <Graphic.SevenSegmentDisplay character={7} />
+  ))
+  .add('8', () => (
+    <Graphic.SevenSegmentDisplay character={8} />
+  ))
+  .add('9', () => (
+    <Graphic.SevenSegmentDisplay character={9} />
+  ))
+  .add('a', () => (
+    <Graphic.SevenSegmentDisplay character={'a'} />
+  ))
+  .add('b', () => (
+    <Graphic.SevenSegmentDisplay character={'b'} />
+  ))
+  .add('c', () => (
+    <Graphic.SevenSegmentDisplay character={'c'} />
+  ))
+  .add('d', () => (
+    <Graphic.SevenSegmentDisplay character={'d'} />
+  ))
+  .add('e', () => (
+    <Graphic.SevenSegmentDisplay character={'e'} />
+  ))
+  .add('f', () => (
+    <Graphic.SevenSegmentDisplay character={'f'} />
+  ))
+  .add('g', () => (
+    <Graphic.SevenSegmentDisplay character={'g'} />
+  ))
+  .add('h', () => (
+    <Graphic.SevenSegmentDisplay character={'h'} />
+  ))
+  .add('i', () => (
+    <Graphic.SevenSegmentDisplay character={'i'} />
+  ))
+  .add('j', () => (
+    <Graphic.SevenSegmentDisplay character={'j'} />
+  ));
+
+
 
 storiesOf('Square Container', module)
 .add('square', () => <SquareContainer><span>Hi Hi Hi Hi</span></SquareContainer>);
