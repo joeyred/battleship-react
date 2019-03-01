@@ -49,7 +49,7 @@ Graphic.propTypes = {
     PropTypes.arrayOf(PropTypes.number),
     PropTypes.number
   ]).isRequired,
-  height:     PropTypes.oneOf([PropTypes.bool, PropTypes.number]),
+  height:     PropTypes.oneOf(PropTypes.bool, PropTypes.number),
   width:      PropTypes.oneOf([PropTypes.bool, PropTypes.number]),
   display:    PropTypes.bool,
   keepRatio:  PropTypes.bool,
