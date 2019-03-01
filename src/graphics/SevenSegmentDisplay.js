@@ -49,13 +49,14 @@ const SevenSegmentDisplay = (props) => {
   return (
     <Graphic viewBox={[49.3, 92.7]}>
       {segments}
+
     </Graphic>
   );
 }
 
 SevenSegmentDisplay.propTypes = {
-  character: PropTypes.oneOf([PropTypes.string, PropTypes.number]).isRequired,
-  color:     PropTypes.String
+  character: PropTypes.oneOf([PropTypes.string, PropTypes.number]).isRequired
+  // color:     PropTypes.String
 };
 
 export default SevenSegmentDisplay;

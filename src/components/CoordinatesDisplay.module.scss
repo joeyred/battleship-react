@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  figure {
+    margin: 0;
+  }
+}
+
+.left-ssd {
+  flex: 0 1 50%;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+.right-ssd {
+  flex: 0 1 50%;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}

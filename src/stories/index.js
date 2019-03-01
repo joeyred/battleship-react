@@ -11,6 +11,7 @@ import Button from '../components/Button';
 import ButtonGroup from '../components/ButtonGroup';
 import ButtonGrid from '../components/ButtonGrid';
 import SquareContainer from '../components/SquareContainer';
+import CoordinatesDisplay from '../components/CoordinatesDisplay';
 
 import * as Graphic from '../graphics';
 
@@ -124,6 +125,22 @@ storiesOf('Seven Segment Display', module)
   ))
   .add('j', () => (
     <Graphic.SevenSegmentDisplay character={'j'} />
+  ));
+
+storiesOf('CoordinatesDisplay', module)
+  .addDecorator(story =>
+    <div
+      style={{
+        width: '50%',
+        height: 'auto',
+        margin: '4rem auto'
+      }}
+    >
+    {story()}
+    </div>
+  )
+  .add('a - 1', () => (
+    <CoordinatesDisplay coordinates={[0, 1]} />
   ));
 
 
