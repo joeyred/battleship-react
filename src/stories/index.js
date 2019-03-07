@@ -12,6 +12,8 @@ import ButtonGroup from '../components/ButtonGroup';
 import ButtonGrid from '../components/ButtonGrid';
 import SquareContainer from '../components/SquareContainer';
 import CoordinatesDisplay from '../components/CoordinatesDisplay';
+import Label from '../components/Label';
+import ControlGroupHeader from '../components/ControlGroupHeader';
 
 import * as Graphic from '../graphics';
 
@@ -147,3 +149,9 @@ storiesOf('CoordinatesDisplay', module)
 
 storiesOf('Square Container', module)
 .add('square', () => <SquareContainer><span>Hi Hi Hi Hi</span></SquareContainer>);
+
+storiesOf('Label', module)
+  .add('basic example', () => <Label>Hello World</Label>);
+
+storiesOf('Control Group Header', module)
+  .add('basic example', () => <ControlGroupHeader level={2}>Hello World</ControlGroupHeader>);
