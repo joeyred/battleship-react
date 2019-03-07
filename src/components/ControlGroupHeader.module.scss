@@ -1,0 +1,37 @@
+$border-thickness: 2px;
+$border-style: solid;
+$border-color: #111;
+$border: $border-thickness $border-style $border-color;
+
+.base {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 0.5;
+}
+
+.text {
+  display: inline-block;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    border-top: $border;
+
+  }
+
+  &:before {
+    right: 100%;
+    margin-right: 10px;
+    border-left: $border;
+  }
+  &:after {
+    left: 100%;
+    margin-left: 10px;
+    border-right: $border;
+  }
+}
