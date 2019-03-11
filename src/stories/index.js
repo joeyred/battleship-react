@@ -17,6 +17,9 @@ import ControlGroupHeader from '../components/ControlGroupHeader';
 
 import * as Graphic from '../graphics';
 
+import '../scss/typography.scss';
+import '../scss/resets.scss';
+
 storiesOf('Welcome', module)
   .add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 storiesOf('Light', module)
