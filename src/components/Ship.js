@@ -16,12 +16,12 @@ const Ship = (props) => {
     positioningMethod,
     attributes
   } = props;
-
+  attributes.style = {};
   if (positioningMethod === 'grid') {
-    attributes.style = {
-      gridArea: calcPosition.grid(locations)
-    };
+    attributes.style.gridArea = calcPosition.grid(locations);
   }
+  attributes.style.padding = '0.3rem';
+
 
   const shipGraphic =
     name === 'carrier' ? <Graphic.Carrier direction={direction} /> :
