@@ -158,3 +158,23 @@ storiesOf('Label', module)
 
 storiesOf('Control Group Header', module)
   .add('basic example', () => <ControlGroupHeader level={2}>Hello World</ControlGroupHeader>);
+
+
+storiesOf('Ship Graphic', module)
+  .addDecorator(story =>
+    <div
+      style={{
+        width: '120px',
+        height: 'auto',
+        margin: '4rem auto'
+      }}
+    >
+    {story()}
+    </div>
+  )
+  .add('Carrier', () => <Graphic.Carrier />)
+  .add('Battleship', () => <Graphic.Battleship />)
+  .add('Cruiser', () => <Graphic.Cruiser />)
+  .add('Submarine', () => <Graphic.Submarine />)
+  .add('Destroyer', () => <Graphic.Destroyer />)
+  ;
