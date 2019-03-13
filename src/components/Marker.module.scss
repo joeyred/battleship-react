@@ -1,0 +1,15 @@
+.base {
+  border-radius: 50%;
+  height: 80%;
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+}
+
+.hit {
+  background: red;
+}
+
+.miss {
+  background: white;
+}
