@@ -21,9 +21,6 @@ export function grid(locations) {
 
     xEnd = locations[locations.length - 1][0] + 2;
     yEnd = locations[locations.length - 1][1] + 2;
-    for (let i = 0; i < locations.length; i++) {
-
-    }
   }
   return `${yStart} / ${xStart} / ${yEnd} / ${xEnd}`;
 }
@@ -36,4 +33,9 @@ export function grid(locations) {
  */
 export function absolute(cellSize, coordinates) {
   return [cellSize * coordinates[0], cellSize * coordinates[1]];
+}
+
+export default {
+  grid,
+  absolute
 }

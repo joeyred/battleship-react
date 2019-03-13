@@ -14,6 +14,7 @@ import SquareContainer from '../components/SquareContainer';
 import CoordinatesDisplay from '../components/CoordinatesDisplay';
 import Label from '../components/Label';
 import ControlGroupHeader from '../components/ControlGroupHeader';
+import Ship from '../components/Ship';
 
 import * as Graphic from '../graphics';
 
@@ -158,3 +159,127 @@ storiesOf('Label', module)
 
 storiesOf('Control Group Header', module)
   .add('basic example', () => <ControlGroupHeader level={2}>Hello World</ControlGroupHeader>);
+
+
+storiesOf('Ship Graphic', module)
+  .addDecorator(story =>
+    <div
+      style={{
+        width: '120px',
+        height: 'auto',
+        margin: '4rem auto'
+      }}
+    >
+    {story()}
+    </div>
+  )
+  .add('Carrier', () => <Graphic.Carrier />)
+  .add('Battleship', () => <Graphic.Battleship />)
+  .add('Cruiser', () => <Graphic.Cruiser />)
+  .add('Submarine', () => <Graphic.Submarine />)
+  .add('Destroyer', () => <Graphic.Destroyer />)
+;
+
+storiesOf('Ship Component', module)
+  // .addDecorator(story =>
+  //   <div
+  //     style={{
+  //       width: '500px',
+  //       height: '500px',
+  //       margin: '4rem auto',
+  //       display: 'grid',
+  //       gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr',
+  //       gridTemplateRows: '1fr 1fr 1fr 1fr 1fr 1fr 1fr'
+  //     }}
+  //   >
+  //   {story()}
+  //   </div>
+  // )
+  .add('Ships - vertical', () =>
+    <div
+      style={{
+        width: '500px',
+        height: '500px',
+        margin: '4rem auto',
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr',
+        gridTemplateRows: '1fr 1fr 1fr 1fr 1fr 1fr 1fr'
+      }}
+    >
+      <Ship
+        name='carrier'
+        size={5}
+        direction='vertical'
+        locations={[[0, 1], [0, 2], [0, 3], [0, 4], [0, 5]]}
+      />
+      <Ship
+        name='battleship'
+        size={4}
+        direction='vertical'
+        locations={[[1, 1], [1, 2], [1, 3], [1, 4]]}
+      />
+      <Ship
+        name='cruiser'
+        size={3}
+        direction='vertical'
+        locations={[[3, 1], [3, 2], [3, 3]]}
+      />
+      <Ship
+        name='submarine'
+        size={3}
+        direction='vertical'
+        locations={[[4, 1], [4, 2], [4, 3]]}
+      />
+      <Ship
+        name='destroyer'
+        size={2}
+        direction='vertical'
+        locations={[[5, 1], [5, 2]]}
+      />
+    </div>
+  )
+  .add('Ships - horizontal', () =>
+    <div
+      style={{
+        width: '500px',
+        height: '500px',
+        margin: '4rem auto',
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr',
+        gridTemplateRows: '1fr 1fr 1fr 1fr 1fr 1fr 1fr'
+      }}
+    >
+      <Ship
+        name='carrier'
+        size={5}
+        direction='horizontal'
+        locations={[[1, 0], [2, 0], [3, 0], [4, 0], [5, 0]]}
+      />
+      <Ship
+        name='battleship'
+        size={4}
+        direction='horizontal'
+        locations={[[1, 1], [2, 1], [3, 1], [4, 1]]}
+      />
+      <Ship
+        name='cruiser'
+        size={3}
+        direction='horizontal'
+        locations={[[1, 2], [2, 2], [3, 2]]}
+      />
+      <Ship
+        name='submarine'
+        size={3}
+        direction='horizontal'
+        locations={[[1, 3], [2, 3], [3, 3]]}
+      />
+      <Ship
+        name='destroyer'
+        size={2}
+        direction='horizontal'
+        locations={[[1, 4], [2, 4]]}
+      />
+    </div>
+  )
+
+;
